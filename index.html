@@ -2027,16 +2027,26 @@
       content: "";
     }
 
-    .comms-item:nth-child(2)::before,
-    .comms-item:nth-child(3)::before {
+    .comms-item:nth-child(1)::before {
+      background: #777777;
+    }
+
+    .comms-item:nth-child(2)::before {
       background: #d99929;
+    }
+
+    .comms-item:nth-child(3)::before {
+      background: var(--york-red);
     }
 
     .comms-item:nth-child(4)::before {
       background: var(--blue);
     }
 
-    .comms-item:nth-child(5)::before,
+    .comms-item:nth-child(5)::before {
+      background: #6b5ca5;
+    }
+
     .comms-item:nth-child(6)::before {
       background: var(--green);
     }
@@ -3723,29 +3733,29 @@
 <span class="slide-number">10</span>
 <div>
 <span class="eyebrow anim">UIT Service Desk training</span>
-<h2 class="anim" id="slide-10-title" style="--delay:140ms">Train for the exceptions</h2>
-<p class="lede anim" style="--delay:210ms">The Service Desk does not need to learn AI. It needs to recognize the new ticket state, protect active processing, and recover cleanly when needed</p>
+<h2 class="anim" id="slide-10-title" style="--delay:140ms">Train CS to...</h2>
+<p class="lede anim" style="--delay:210ms">With their freed capacity, the Service Desk  will  help support auto triage and remediate potential issues</p>
 </div>
 <div class="training-playbook">
 <article class="training-card anim" style="--delay:160ms">
 <span class="training-num">01 · RECOGNIZE</span>
-<h3>Know when Auto Triage is working</h3>
-<p>“Otto Excellence” indicates active processing. Do not interrupt a ticket that is moving normally</p>
+<h3>Understand the process</h3>
+<p>Understand when Otto Excellence is actively processing and avoid interrupting auto traige</p>
 </article>
 <article class="training-card anim" style="--delay:220ms">
 <span class="training-num">02 · MONITOR</span>
-<h3>Watch the right signals</h3>
-<p>Check the IT Client Services queue and Stalled Tickets Dashboard every working hour</p>
+<h3>Watch for issues</h3>
+<p>Check the IT Client Services queue and Otto Excellence Dashboard every working hour</p>
 </article>
 <article class="training-card anim" style="--delay:280ms">
 <span class="training-num">03 · RECOVER</span>
-<h3>Return exceptions to service</h3>
-<p>Confirm the stall, apply the correct category and team, then process or route the ticket</p>
+<h3>Route stalled tickets</h3>
+<p>Confirm when a ticket is stalled, and triage as usual</p>
 </article>
 <article class="training-card anim" style="--delay:340ms">
 <span class="training-num">04 · REPORT</span>
 <h3>Turn patterns into improvement</h3>
-<p>Record recurring errors, unusual trends, and repeated stalls, then notify Operational Excellence</p>
+<p>Record and report recurring errors, unusual trends, and repeated stalls, then notify Operational Excellence</p>
 </article>
 </div>
 </div>
@@ -3753,58 +3763,58 @@
 <div class="slide-inner comms-layout">
 <span class="slide-number">11</span>
 <div>
-<span class="eyebrow anim">Proposed communication cadence</span>
-<h2 class="anim" id="slide-11-title" style="--delay:140ms">Short, staged, role-specific</h2>
-<p class="comms-note anim" style="--delay:210ms">Communicate what each group needs when it becomes relevant. Use targeted operational updates, not blanket noise</p>
+<span class="eyebrow anim">The stage is set</span>
+<h2 class="anim" id="slide-11-title" style="--delay:140ms">How it plays out</h2>
+<p class="comms-note anim" style="--delay:210ms">Major value with minimal disruption</em></p>
 </div>
 <div aria-label="Proposed communication schedule" class="comms-schedule anim" role="group" style="--delay:230ms">
 <article class="comms-item">
 <div>
-<span class="comms-date">Before Aug 15</span>
-<h3>Build context</h3>
-<p>Leadership briefing, project page, and manager cascade explain the purpose, value, risk, and release plan</p>
+<span class="comms-date">August 5</span>
+<h3>Change Advisory 1</h3>
+<p>1st change advisory to notify IT staff of the change to Halo and point them to the Auto Triage for more info</p>
 </div>
-<span class="comms-audience">IT leaders · Managers</span>
+<span class="comms-audience">All IT Staff</span>
 </article>
 <article class="comms-item">
 <div>
-<span class="comms-date">Aug 15</span>
-<h3>Start monitoring</h3>
-<p>Service advisory confirms monitoring phase and makes clear that agent workflows do not change</p>
+<span class="comms-date">Aug 14</span>
+<h3>Begin monitoring</h3>
+<p>The monitoring phase begins but nothing changes for agents or end users</p>
 </div>
-<span class="comms-audience">All IT agents</span>
+<span class="comms-audience">OPEX</span>
 </article>
 <article class="comms-item">
 <div>
-<span class="comms-date">Aug 15 → 30</span>
-<h3>Prepare roles</h3>
-<p>Publish the agent guide, train the Service Desk, and brief teams that will receive auto-routed work</p>
+<span class="comms-date">Aug 17</span>
+<h3>Change Advisory 2</h3>
+<p>2nd change advisory to notify IT staff of move to active routing</p>
 </div>
-<span class="comms-audience">Agents · Affected teams</span>
+<span class="comms-audience">All IT Staff</span>
 </article>
 <article class="comms-item">
 <div>
-<span class="comms-date">Before Aug 31</span>
+<span class="comms-date">Aug 17 → 30</span>
+<h3>Prepare Agents</h3>
+<p>IT agent communications sent with links to the <strong>IT agent guide.</strong> CS-specific training will begin for the service desk</p>
+</div>
+<span class="comms-audience">IT Agents</span>
+</article>
+<article class="comms-item">
+<div>
+<span class="comms-date">Aug 30</span>
 <h3>Confirm readiness</h3>
-<p>Share the readiness outcome, go-live advisory, expectations, and escalation route</p>
+<p>Analyze and share the monitoring-phase data and confirm confidence in the move to active auto routing</p>
 </div>
-<span class="comms-audience">Leaders · Agents</span>
+<span class="comms-audience">IT LEadership</span>
 </article>
 <article class="comms-item">
 <div>
 <span class="comms-date">Aug 31</span>
-<h3>Confirm launch</h3>
-<p>Announce active routing, restate the human fallback, and link to role guidance</p>
+<h3>Launch</h3>
+<p>Switch on and monitor auto routing</p>
 </div>
-<span class="comms-audience">All IT agents</span>
-</article>
-<article class="comms-item">
-<div>
-<span class="comms-date">Fall peak</span>
-<h3>Close the loop</h3>
-<p>Use dashboard results and recurring issues to send concise, targeted operational updates</p>
-</div>
-<span class="comms-audience">Leaders · Affected teams</span>
+<span class="comms-audience">All IT staff</span>
 </article>
 </div>
 </div>
@@ -3812,25 +3822,27 @@
 <div class="slide-inner closing-layout">
 <span class="slide-number">12</span>
 <div>
-<span class="eyebrow anim">What we need from IT leaders</span>
-<h2 class="anim" id="slide-12-title" style="--delay:140ms">Back a controlled launch</h2>
-<p class="lede anim" style="--delay:210ms">The technology can move tickets. Leaders make the change understandable, safe, and durable</p>
+<span class="eyebrow anim">Champion the change</span>
+<h2 class="anim" id="slide-12-title" style="--delay:140ms">Prepare our People</h2>
+<p class="lede anim" style="--delay:210ms">Otto shuffles the tickets</p>
+<p class="lede anim" style="--delay:210ms">We shift the culture</p>
 </div>
 <div class="leader-asks">
 <article class="leader-ask anim" style="--delay:170ms">
 <span>01</span>
-<div><strong>Reinforce the purpose</strong><p>This is about less waiting and better use of human capacity, not removing people from service</p></div>
+<div><strong>Raise the banner</strong><p>Herald auto triage and reinforce the message that it removes waiting and defends precious resource capacity. It bring service closer to our people; it doesn't remove the people who deliver it</p></div>
 </article>
 <article class="leader-ask anim" style="--delay:240ms">
 <span>02</span>
-<div><strong>Make readiness visible</strong><p>Confirm teams understand what changes, what does not, and where issues go</p></div>
+<div><strong>Rally your people</strong><p>Confirm your teams understand the coming change and their roles in it. Direct them to the communications and resources that are being sent out. I will also send you all a one-page reference after this meeting</div>
 </article>
 <article class="leader-ask anim" style="--delay:310ms">
 <span>03</span>
-<div><strong>Protect the guardrails</strong><p>Support the readiness gate, human fallback, transparent metrics, and rapid tuning</p></div>
+<div><strong>Fortify the foundation</strong><p>This is the foundation of service automation. We need to hold the line through early rollout, learn from every result and build the operational discipline needed to scale automated routing and responses</p></div>
 </article>
 </div>
-<p class="closing-line anim" style="--delay:390ms"><strong>Start narrow</strong> Learn in production. Improve the front door before peak</p>
+<p class="closing-line anim" style="--delay:390ms"><strong>SEQUENDA VIA</strong> OUR PATH FORWARD</p>
+
 </div>
 </section></main>
 <footer aria-label="Presentation controls" class="deck-footer">
