@@ -1820,6 +1820,25 @@
       line-height: 1.5;
     }
 
+    .impact-list {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0;
+      padding-left: 1.15rem;
+      color: #444444;
+      font-size: 0.88rem;
+      font-weight: 520;
+      line-height: 1.5;
+    }
+
+    .impact-list li {
+      padding-left: 0.15rem;
+    }
+
+    .impact-list li::marker {
+      color: var(--york-red);
+    }
+
     /* Readiness */
     .readiness-head {
       display: flex;
@@ -3449,7 +3468,7 @@
 <section aria-labelledby="control-tab-response" class="control-panel" hidden="" id="control-response" role="tabpanel">
 <div>
 <span class="tag tag--green">Guardrail</span>
-<h3>We only hunt our white whale, Duo 2FA...</h3>
+<h3>We only hunt our white whale, Duo 2FA... 🐋</h3>
 </div>
 <ul class="guardrail-list">
 <li>Only auto respond to Duo requests sent from a York University email address</li>
@@ -3574,8 +3593,10 @@
 <div class="impact-columns">
 <div class="impact-column">
   <span>What changes</span>
-  <p>Some tickets may arrive in their queue from Otto Excellence rather than a CS agent.</p>
-  <p>Tickets appear directly in the team's queue and may arrive sooner than they do today.</p>
+  <ul class="impact-list">
+    <li>Some tickets may arrive in their queue from Otto Excellence rather than a CS agent.</li>
+    <li>Tickets appear directly in the team's queue and may arrive sooner than they do today.</li>
+  </ul>
 </div>
 <div class="impact-column"><span>What stays</span><p>Current review, response, escalation, categorization, and resolution practices remain in place</p></div>
 <div class="impact-column"><span>Required Action - No Change</span><p>Monitor ticket queues and <strong>follow Halo best practices</strong> especially around misrouted tickets and verifying categorization before resolution</p></div>
