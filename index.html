@@ -1839,6 +1839,17 @@
       color: var(--york-red);
     }
 
+    .impact-list ul {
+      display: grid;
+      gap: 0.35rem;
+      margin: 0.55rem 0 0;
+      padding-left: 1.15rem;
+    }
+
+    .impact-list ul li::marker {
+      color: #777777;
+    }
+
     /* Readiness */
     .readiness-head {
       display: flex;
@@ -3468,11 +3479,11 @@
 <section aria-labelledby="control-tab-response" class="control-panel" hidden="" id="control-response" role="tabpanel">
 <div>
 <span class="tag tag--green">Guardrail</span>
-<h3>We only hunt our white whale, Duo 2FA... 🐋</h3>
+<h3>Hunt our white whale, Duo 2FA... 🐋</h3>
 </div>
 <ul class="guardrail-list">
 <li>Only auto respond to Duo requests sent from a York University email address</li>
-<li>Only when a Duo request is missing required information</li>
+<li>Only when a Duo request is missing required info</li>
 <li>Halo sends approved canned text based on AI trigger, not AI-generated free-form advice</li>
 <li>If the follow up doesn't apply, the response will trigger a CS agent to take over and continue as usual</li>
 </ul>
@@ -3574,7 +3585,6 @@
 <div aria-label="Affected groups" class="impact-tabs anim" role="tablist" style="--delay:210ms">
 <button aria-controls="impact-requesters" aria-selected="true" class="impact-tab" id="impact-tab-requesters" role="tab" type="button">Our community</button>
 <button aria-controls="impact-agents" aria-selected="false" class="impact-tab" id="impact-tab-agents" role="tab" tabindex="-1" type="button">All IT agents</button>
-<button aria-controls="impact-teams" aria-selected="false" class="impact-tab" id="impact-tab-teams" role="tab" tabindex="-1" type="button">Resolution teams</button>
 <button aria-controls="impact-desk" aria-selected="false" class="impact-tab" id="impact-tab-desk" role="tab" tabindex="-1" type="button">UIT Service Desk</button>
 <button aria-controls="impact-leaders" aria-selected="false" class="impact-tab" id="impact-tab-leaders" role="tab" tabindex="-1" type="button">IT leaders</button>
 </div>
@@ -3583,48 +3593,128 @@
 <section aria-labelledby="impact-tab-requesters" class="impact-panel" id="impact-requesters" role="tabpanel">
 <header class="impact-head"><h3>Requesters</h3><span class="impact-level">Low impact</span></header>
 <div class="impact-columns">
-<div class="impact-column"><span>What changes</span><p>Some of their requests reach the people that can help them sooner. Duo requests may receive an immediate reply requesting missing information that CS needs in order to help</p></div>
-<div class="impact-column"><span>What stays</span><p>They still have the same (or better) access to service. They same support staff will resolves their requests</p></div>
-<div class="impact-column"><span>Required action - No Change</span><p><strong>Respond to automatic follow ups</strong></p></div>
+<div class="impact-column">
+  <span>What changes</span>
+  <ul class="impact-list">
+    <li>Some of their requests reach the people that can help them sooner</li>
+    <li>Duo requests may receive auto reply requesting missing info</li>
+  </ul>
+</div>
+<div class="impact-column">
+  <span>What stays</span>
+  <ul class="impact-list">
+    <li>They still have the same (or better) access to service</li>
+    <li>The same support staff will resolve their requests</li>
+  </ul>
+</div>
+<div class="impact-column">
+  <span>Required action - No Change</span>
+  <ul class="impact-list">
+    <li><strong>Respond to automatic follow ups</strong></li>
+  </ul>
+</div>
 </div>
 </section>
 <section aria-labelledby="impact-tab-agents" class="impact-panel" hidden="" id="impact-agents" role="tabpanel">
-<header class="impact-head"><h3>All Halo IT agents</h3><span class="impact-level">Low impact</span></header>
+<header class="impact-head"><h3>IT agents</h3><span class="impact-level">Low impact</span></header>
 <div class="impact-columns">
 <div class="impact-column">
   <span>What changes</span>
   <ul class="impact-list">
-    <li>Some tickets may arrive in their queue from Otto Excellence rather than a CS agent.</li>
-    <li>Tickets appear directly in the team's queue and may arrive sooner than they do today.</li>
+    <li>
+      Some tickets will be auto routed to the following queues:
+      <ul>
+        <li>AVSS</li>
+        <li>CTS</li>
+        <li>ED&amp;I</li>
+        <li>Information Security</li>
+        <li>Learning Technology Services</li>
+        <li>Network Services</li>
+        <li>Service Desk - Account Management</li>
+        <li>SMS-O365</li>
+        <li>Student Information System</li>
+        <li>Telecommunications</li>
+      </ul>
+    </li>
+    <li>Both manual and auto-routed tickets may be triaged to all queues faster than before</li>
   </ul>
 </div>
-<div class="impact-column"><span>What stays</span><p>Current review, response, escalation, categorization, and resolution practices remain in place</p></div>
-<div class="impact-column"><span>Required Action - No Change</span><p>Monitor ticket queues and <strong>follow Halo best practices</strong> especially around misrouted tickets and verifying categorization before resolution</p></div>
+<div class="impact-column">
+  <span>What stays</span>
+  <ul class="impact-list">
+    <li>Current review, response, escalation, categorization, and resolution practices remain in place</li>
+  </ul>
 </div>
-</section>
-<section aria-labelledby="impact-tab-teams" class="impact-panel" hidden="" id="impact-teams" role="tabpanel">
-<header class="impact-head"><h3>Resolution teams receiving auto-routed tickets</h3><span class="impact-level">Moderate impact</span></header>
-<div class="impact-columns">
-<div class="impact-column"><span>What changes</span><p>Eligible tickets appear directly in the team's queue and may arrive sooner than they do today</p></div>
-<div class="impact-column"><span>What stays</span><p>The team remains responsible for reviewing, responding to, and resolving its services</p></div>
-<div class="impact-column"><span>What we need</span><p>Watch queues earlier and more often, correct isolated errors, and report significant patterns</p></div>
+<div class="impact-column">
+  <span>Required Action</span>
+  <ul class="impact-list">
+    <li>Monitor ticket queues early and often</li>
+    <li><strong>Follow Halo best practices</strong>, especially for misrouted tickets and verifying categorization before resolution</li>
+    <li>
+      Notify OpEx about persistent routing errors
+      <ul>
+        <li>Raise an Incident to OpEx: Application &gt; HaloITSM &gt; Triage Agent Issue</li>
+      </ul>
+    </li>
+  </ul>
+</div>
 </div>
 </section>
 <section aria-labelledby="impact-tab-desk" class="impact-panel" hidden="" id="impact-desk" role="tabpanel">
-<header class="impact-head"><h3>UIT Service Desk</h3><span class="impact-level impact-level--high">Highest impact</span></header>
+<header class="impact-head"><h3>UIT Service Desk</h3><span class="impact-level impact-level--high">Medium Impact</span></header>
 <div class="impact-columns">
-<div class="impact-column"><span>What changes</span><p>Less manual routing for confident tickets. New responsibility for monitoring and recovering stalled automation</p></div>
-<div class="impact-column"><span>What stays</span><p>The Service Desk remains the safety net for low-confidence, out-of-scope, incomplete, and exceptional requests</p></div>
-<div class="impact-column"><span>What we need</span><p>Monitor the queue and dashboard, avoid interrupting active processing, recover exceptions, and report patterns</p></div>
+<div class="impact-column">
+  <span>What changes</span>
+  <ul class="impact-list">
+    <li>Less manual routing for confident in-scope tickets</li>
+    <li>Responsible for monitoring and recovering stalled tickets</li>
+  </ul>
+</div>
+<div class="impact-column">
+  <span>What stays</span>
+  <ul class="impact-list">
+    <li>The Service Desk continues to triage low-confidence, out-of-scope, incomplete, and exceptional requests</li>
+  </ul>
+</div>
+<div class="impact-column">
+  <span>Required action</span>
+  <ul class="impact-list">
+    <li>Monitor the queue and Otto Excellence dashboard</li>
+    <li>Avoid interrupting active Otto Excellence processing</li>
+    <li>Recover stalled tickets</li>
+    <li>Notify OpEx about persistent routing or stalling errors</li>
+      <ul>
+        <li>Raise an Incident to OpEx: Application &gt; HaloITSM &gt; Triage Agent Issue</li>
+      </ul>
+  </ul>
+</div>
 </div>
 </section>
 <section aria-labelledby="impact-tab-leaders" class="impact-panel" hidden="" id="impact-leaders" role="tabpanel">
-<header class="impact-head"><h3>IT leaders and managers</h3><span class="impact-level">Moderate impact</span></header>
+<header class="impact-head"><h3>IT leaders and managers</h3><span class="impact-level">Low impact</span></header>
 <div class="impact-columns">
-<div class="impact-column"><span>What changes</span><p>Leaders receive clearer operational evidence about routing performance, exceptions, and readiness</p></div>
-<div class="impact-column"><span>What stays</span><p>Service ownership, escalation accountability, and human responsibility do not move to the AI</p></div>
-<div class="impact-column"><span>What we need</span><p>Reinforce expectations, confirm team readiness, and support evidence-based tuning during peak</p></div>
+<div class="impact-column">
+  <span>What changes</span>
+  <ul class="impact-list">
+    <li>Leaders receive clearer operational evidence about routing performance, exceptions, and readiness</li>
+  </ul>
 </div>
+<div class="impact-column">
+  <span>What stays</span>
+  <ul class="impact-list">
+    <li>Service ownership, escalation accountability, and human responsibility do not move to the AI</li>
+  </ul>
+</div>
+<div class="impact-column">
+  <span>What we need</span>
+  <ul class="impact-list">
+    <li>Reinforce expectations</li>
+    <li>Confirm team readiness</li>
+    <li>Support evidence-based tuning during peak</li>
+  </ul>
+</div>
+</div>
+</section>
 </section>
 </div>
 </div>
