@@ -1643,17 +1643,18 @@
     }
 
     #slide-08 {
-      background: linear-gradient(115deg, #4d141d 0%, #811528 100%);
+      background: #fafafa;
+      color: var(--ink);
     }
 
     #slide-08 .now-grid {
       display: grid;
-      width: min(1040px, calc(100% - clamp(2.5rem, 8vw, 8.5rem)));
-      grid-template-columns: 1fr;
-      place-content: center;
+      width: min(1320px, calc(100% - clamp(2rem, 5vw, 5rem)));
+      grid-template-columns: minmax(24rem, 0.82fr) minmax(36rem, 1.18fr);
+      gap: clamp(3rem, 7vw, 7rem);
+      align-items: center;
     }
 
-    #slide-08 .now-heading,
     #slide-08 .slide-number {
       position: absolute;
       width: 1px;
@@ -1661,6 +1662,26 @@
       overflow: hidden;
       clip-path: inset(50%);
       white-space: nowrap;
+    }
+
+    #slide-08 .now-heading {
+      align-self: center;
+    }
+
+    #slide-08 .eyebrow {
+      margin-bottom: 1.6rem;
+      color: var(--york-red);
+      font-size: 0.86rem;
+      letter-spacing: 0.15em;
+    }
+
+    #slide-08 .now-grid h2 {
+      max-width: 6.3ch;
+      margin: 0;
+      color: #111111;
+      font-size: clamp(4rem, 5.8vw, 5.25rem);
+      font-weight: 620;
+      line-height: 0.94;
     }
 
     .guardrail-grid {
@@ -1680,41 +1701,55 @@
     }
 
     #slide-08 .guardrail-card {
-      min-height: clamp(10rem, 25vh, 13rem);
-      padding: clamp(1.25rem, 2.5vw, 2rem);
-      border-color: rgba(255, 255, 255, 0.24);
-      background: rgba(17, 17, 17, 0.72);
-      box-shadow: none;
-      grid-template-columns: 1fr;
-      gap: clamp(1.5rem, 4vh, 2.8rem);
-      align-content: start;
+      min-height: 5.35rem;
+      padding: 0.9rem 1rem;
+      border-color: #d4d4d4;
+      background: #ffffff;
+      box-shadow: 0 1.7rem 2.4rem rgba(0, 0, 0, 0.08);
+      grid-template-columns: 3rem minmax(0, 1fr);
+      gap: 1.05rem;
+      align-content: center;
     }
 
     #slide-08 .guardrail-card:nth-child(2),
     #slide-08 .guardrail-card:nth-child(3) {
-      background: rgba(35, 25, 27, 0.66);
+      background: #ffffff;
+    }
+
+    #slide-08 .guardrail-card:nth-child(2) {
+      margin-right: 2rem;
+    }
+
+    #slide-08 .guardrail-card:nth-child(3) {
+      margin-left: 0.25rem;
+      margin-right: -0.25rem;
+    }
+
+    #slide-08 .guardrail-card:nth-child(4) {
+      margin-right: 0.25rem;
     }
 
     #slide-08 .guardrail-card span {
-      display: block;
-      width: auto;
-      height: auto;
-      background: none;
-      color: #ef8495;
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
+      display: grid;
+      width: 3rem;
+      height: 3rem;
+      place-items: center;
+      background: #f11746;
+      color: #ffffff;
+      font-size: 0.9rem;
+      letter-spacing: 0;
     }
 
     #slide-08 .guardrail-card strong {
-      margin-bottom: 0.5rem;
-      color: var(--paper);
-      font-size: clamp(1.05rem, 1.65vw, 1.35rem);
+      margin-bottom: 0.25rem;
+      color: #171717;
+      font-size: 1rem;
     }
 
     #slide-08 .guardrail-card p {
       max-width: 34rem;
-      color: #d3cfd0;
-      font-size: clamp(0.8rem, 1.15vw, 0.98rem);
+      color: #5c5c5c;
+      font-size: 0.75rem;
     }
 
     .guardrail-card span {
@@ -2882,6 +2917,8 @@
 
       #slide-08 .now-grid {
         width: min(100% - 2rem, 44rem);
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
         place-content: start;
       }
 
@@ -2890,8 +2927,13 @@
       }
 
       #slide-08 .guardrail-card {
-        min-height: 9rem;
+        min-height: 5.35rem;
         gap: 1rem;
+      }
+
+      #slide-08 .guardrail-card:nth-child(n) {
+        margin-right: 0;
+        margin-left: 0;
       }
 
       h1 {
@@ -3644,7 +3686,7 @@
 </div>
 <div class="guardrail-stack">
 <article class="guardrail-card anim" style="--delay:150ms">
-  <span>01</span>
+  <span><i class="fas fa-ticket-simple" aria-hidden="true"></i></span>
   <div>
     <strong>Start with a small scope</strong>
     <p>Only the most frequently used categories are eligible</p>
@@ -3652,7 +3694,7 @@
 </article>
 
 <article class="guardrail-card anim" style="--delay:210ms">
-  <span>02</span>
+  <span><i class="fas fa-umbrella" aria-hidden="true"></i></span>
   <div>
     <strong>Require high confidence</strong>
     <p>Uncertain decisions stay with the Service Desk</p>
@@ -3660,7 +3702,7 @@
 </article>
 
 <article class="guardrail-card anim" style="--delay:270ms">
-  <span><i class="fas fa-user-shield" aria-hidden="true"></i></span>
+  <span><i class="fas fa-chess-pawn" aria-hidden="true"></i></span>
   <div>
     <strong>Humans remain the heart</strong>
     <p>People remain responsible for exceptions, judgement and service quality</p>
@@ -3668,7 +3710,7 @@
 </article>
 
 <article class="guardrail-card anim" style="--delay:330ms">
-  <span><i class="fas fa-gauge-high" aria-hidden="true"></i></span>
+  <span><i class="far fa-circle" aria-hidden="true"></i></span>
   <div>
     <strong>Observe before acting</strong>
     <p>Two weeks of production data inform the decision</p>
