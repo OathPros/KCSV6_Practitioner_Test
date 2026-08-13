@@ -1642,6 +1642,32 @@
       gap: 0.65rem;
     }
 
+    #slide-08 {
+      background: linear-gradient(115deg, #4d141d 0%, #811528 100%);
+    }
+
+    #slide-08 .now-grid {
+      display: grid;
+      width: min(1040px, calc(100% - clamp(2.5rem, 8vw, 8.5rem)));
+      grid-template-columns: 1fr;
+      place-content: center;
+    }
+
+    #slide-08 .now-heading,
+    #slide-08 .slide-number {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .guardrail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .guardrail-card {
       display: grid;
       grid-template-columns: 3.2rem 1fr;
@@ -1651,6 +1677,44 @@
       padding: 0.7rem 1rem;
       border: 1px solid rgba(255, 255, 255, 0.22);
       background: rgba(255, 255, 255, 0.07);
+    }
+
+    #slide-08 .guardrail-card {
+      min-height: clamp(10rem, 25vh, 13rem);
+      padding: clamp(1.25rem, 2.5vw, 2rem);
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(17, 17, 17, 0.72);
+      box-shadow: none;
+      grid-template-columns: 1fr;
+      gap: clamp(1.5rem, 4vh, 2.8rem);
+      align-content: start;
+    }
+
+    #slide-08 .guardrail-card:nth-child(2),
+    #slide-08 .guardrail-card:nth-child(3) {
+      background: rgba(35, 25, 27, 0.66);
+    }
+
+    #slide-08 .guardrail-card span {
+      display: block;
+      width: auto;
+      height: auto;
+      background: none;
+      color: #ef8495;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    #slide-08 .guardrail-card strong {
+      margin-bottom: 0.5rem;
+      color: var(--paper);
+      font-size: clamp(1.05rem, 1.65vw, 1.35rem);
+    }
+
+    #slide-08 .guardrail-card p {
+      max-width: 34rem;
+      color: #d3cfd0;
+      font-size: clamp(0.8rem, 1.15vw, 0.98rem);
     }
 
     .guardrail-card span {
@@ -2816,6 +2880,20 @@
         padding: 2.4rem 0;
       }
 
+      #slide-08 .now-grid {
+        width: min(100% - 2rem, 44rem);
+        place-content: start;
+      }
+
+      .guardrail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #slide-08 .guardrail-card {
+        min-height: 9rem;
+        gap: 1rem;
+      }
+
       h1 {
         font-size: clamp(2.9rem, 14vw, 4.7rem);
       }
@@ -3560,12 +3638,13 @@
 </section><section aria-labelledby="slide-08-title" class="slide slide--red phase--future" data-title="Why before fall peak" id="slide-08">
 <div class="slide-inner now-grid">
 <span class="slide-number">08</span>
-<div>
+<div class="now-heading">
 <span class="eyebrow anim">Why right now?</span>
 <h2 class="anim" id="slide-08-title" style="--delay:140ms">Highest volume = highest value</h2>
 </div>
+<div class="guardrail-grid">
 <article class="guardrail-card anim" style="--delay:150ms">
-  <span><i class="fas fa-layer-group" aria-hidden="true"></i></span>
+  <span>01</span>
   <div>
     <strong>Start with a small scope</strong>
     <p>Only the most frequently used categories are eligible</p>
@@ -3573,7 +3652,7 @@
 </article>
 
 <article class="guardrail-card anim" style="--delay:210ms">
-  <span><i class="fas fa-flask" aria-hidden="true"></i></span>
+  <span>02</span>
   <div>
     <strong>Require high confidence</strong>
     <p>Uncertain decisions stay with the Service Desk</p>
@@ -3581,7 +3660,7 @@
 </article>
 
 <article class="guardrail-card anim" style="--delay:270ms">
-  <span><i class="fas fa-gauge-high" aria-hidden="true"></i></span>
+  <span>03</span>
   <div>
     <strong>Observe before acting</strong>
     <p>Two weeks of production data inform the decision</p>
@@ -3589,12 +3668,13 @@
 </article>
 
 <article class="guardrail-card anim" style="--delay:330ms">
-  <span><i class="fas fa-user-shield" aria-hidden="true"></i></span>
+  <span>04</span>
   <div>
     <strong>Humans remain the heart</strong>
     <p>People remain responsible for exceptions, judgement and service quality</p>
   </div>
 </article>
+</div>
 </div>
 </section><section aria-labelledby="slide-09-title" class="slide slide--soft phase--future" data-title="Who is impacted" id="slide-09">
 <div class="slide-inner impact-layout">
